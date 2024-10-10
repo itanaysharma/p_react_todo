@@ -1,5 +1,12 @@
 import React from "react";
-
+import anime from "animejs/lib/anime.es.js";
+anime({
+  targets: ".circle",
+  loop: true,
+  scale: function (el, i, l) {
+    return l - i + 0.25;
+  },
+});
 function MyApp() {
   return (
     <div className="min-h-screen bg-gray-800 relative pl-32 pr-32">
